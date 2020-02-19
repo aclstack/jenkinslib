@@ -1,6 +1,6 @@
 package org.devops
 
 // 打印内容
-def PringMes(content){
+def PrintMes(content){
     println(content)
 }

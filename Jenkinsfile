@@ -48,7 +48,7 @@ pipeline{
 						script {	
 							println("代码扫描")
 							
-							tools.PrintMes("This is my lib")	// share library调用
+							tools.PrintMes("超级瞄准已部署", "green")	// share library调用
 						}
 					}	
 				}

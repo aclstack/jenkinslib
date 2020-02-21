@@ -47,7 +47,7 @@ pipeline{
 				timeout(time:5, unit:"MINUTES"){
 						script {	
 							println("代码扫描")
-							
+							tools.PrintMes('获取代码','green')
 							tools.PrintMes("超级瞄准已部署", "green")	// share library调用
 						}
 					}	

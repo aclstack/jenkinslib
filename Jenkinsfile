@@ -29,8 +29,7 @@ pipeline{
 					 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
    						doGenerateSubmoduleConfigurations: false,
    						extensions: [], submoduleCfg: [],
-   						userRemoteConfigs: [[credentialsId: 'aclstack', 
-   						url: 'https://github.com/PanJiaChen/vue-element-admin.git']]])
+   						userRemoteConfigs: [[url: 'https://github.com/PanJiaChen/vue-element-admin.git']]])
 				 }
 			 }	
 		 }

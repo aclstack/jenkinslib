@@ -38,6 +38,7 @@ pipeline{
 		stage("Build"){
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
+					sh "echo ${env.PATH}"
 					sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
 				}
 			 }	

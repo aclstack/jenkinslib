@@ -82,6 +82,7 @@ pipeline{
 		failure{
 			script{
 				currentBuild.description = "\n 构建失败!"
+				sh "id"
 			}
 		}
 		

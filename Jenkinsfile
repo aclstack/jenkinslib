@@ -40,7 +40,7 @@ pipeline{
 				timeout(time:20, unit:"MINUTES"){
 					script {
 					  env.NODEJS_HOME = tool "NPM"
-					  sh "${env.NODEJS_HOME}"
+					  sh "echo ${env.NODEJS_HOME}"
 					  sh "echo ${env.PATH}"
 					  sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
 					}

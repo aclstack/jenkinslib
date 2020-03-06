@@ -38,7 +38,7 @@ pipeline{
 		stage("Build"){
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
-					sh 'npm config ls -l'
+					sh 'npm install --registry=https://registry.npm.taobao.org'
 				}
 			 }	
 		 }

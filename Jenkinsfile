@@ -40,7 +40,7 @@ pipeline{
 				timeout(time:20, unit:"MINUTES"){
 						script {
 							npmHome = tool "NPM"
-							sh "env && ${npmHome}/npm install --registry=https://registry.npm.taobao.org && ${npmHome}/npm run build"
+							sh "npm config set cache /home/jenkins/.npm && ${npmHome}/npm install --registry=https://registry.npm.taobao.org && ${npmHome}/npm run build"
 						}
 					}	
 			 }	

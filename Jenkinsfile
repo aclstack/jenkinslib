@@ -5,7 +5,7 @@ String workspace = "/opt/jenkins/workspace"
 
 pipeline{
 	// 基础配置
-	agent {  node  {  label "master"		// 指定运行时的标签或名称
+	agent {  node  {  label "build01"		// 指定运行时的标签或名称
 							customWorkspace  "${workspace}"		// 指定运行时工作目录(可选) 
 		}
 	}

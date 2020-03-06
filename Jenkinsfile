@@ -40,7 +40,7 @@ pipeline{
 				timeout(time:20, unit:"MINUTES"){
 						script {
 							npmHome = tool "NPM"
-							sh " sudo -u jenkins ${npmHome}/npm install --registry=https://registry.npm.taobao.org && ${npmHome}/npm run build"
+							sh " ${npmHome}/npm install --registry=https://registry.npm.taobao.org && ${npmHome}/npm run build"
 						}
 					}	
 			 }	

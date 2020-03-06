@@ -35,7 +35,8 @@ pipeline{
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
 						script {
-							println("应用构建")
+							npmHome = tool "NPM"
+							sh "${npmHome}/bin/npm -v"
 						}
 					}	
 			 }	

@@ -41,7 +41,7 @@ pipeline{
 				timeout(time:20, unit:"MINUTES"){
 						script {
 							npmHome = tool "NPM"
-							sh "${npmHome}/npm -v"
+							sh "${npmHome}/npm install --registry=https://registry.npm.taobao.org && ${npmHome}/npm run build"
 						}
 					}	
 			 }	

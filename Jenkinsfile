@@ -30,7 +30,7 @@ pipeline{
    						doGenerateSubmoduleConfigurations: false,
    						extensions: [], submoduleCfg: [],
    						userRemoteConfigs: [[credentialsId: 'aclstack', 
-   						url: 'https://github.com/aclstack/pangu-front.git']]])
+   						url: 'https://github.com/PanJiaChen/vue-element-admin.git']]])
 				 }
 			 }	
 		 }

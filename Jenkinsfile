@@ -39,9 +39,7 @@ pipeline{
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
 					script {
-					  env.NODEJS_HOME = tool "NPM"
-					  sh "echo ${env.NODEJS_HOME}"
-					  sh "echo ${env.PATH}"
+					 env.PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/jenkins/.local/bin:/home/jenkins/bin"
 					  sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
 					}
 				}

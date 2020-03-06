@@ -39,7 +39,7 @@ pipeline{
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
 					nodejs('NPM') {
-						install
+						sh 'npm config ls -l'
 						}
 					// sh 'npm config ls -l'
 					}	

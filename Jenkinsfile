@@ -36,7 +36,7 @@ pipeline{
 				timeout(time:20, unit:"MINUTES"){
 						script {
 							npmHome = tool "NPM"
-							sh "${npmHome}/bin/npm -v"
+							sh "${npmHome}/npm -v"
 						}
 					}	
 			 }	

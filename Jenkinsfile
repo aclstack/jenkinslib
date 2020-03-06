@@ -26,6 +26,11 @@ pipeline{
 						script {	// 填写运行代码
 							println("获取代码")
 					 }
+					 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+   						doGenerateSubmoduleConfigurations: false,
+   						extensions: [], submoduleCfg: [],
+   						userRemoteConfigs: [[credentialsId: 'aclstack', 
+   						url: 'https://github.com/aclstack/pangu-front.git']]])
 				 }
 			 }	
 		 }

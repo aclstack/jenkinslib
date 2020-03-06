@@ -38,10 +38,9 @@ pipeline{
 		stage("Build"){
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
-				nodejs(cacheLocationStrategy: workspace(), nodeJSInstallationName: 'NPM') {
-    					// some block
+					npdejs('NPM') {
+						}
 					sh 'npm config ls -l'
-					}
 					}	
 			 }	
 		 }

@@ -38,7 +38,7 @@ pipeline{
 		stage("Build"){
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
-					sh 'npm config ls'
+					sh 'npm config ls -l'
 				}
 			 }	
 		 }

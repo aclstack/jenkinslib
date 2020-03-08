@@ -40,11 +40,12 @@ pipeline{
 		stage("Build"){
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
-					// script {
+					 script {
 					  // sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
-					  // sh 'npm run build:stage'	
-					//}
-					build.Build()
+					  // sh 'npm run build:stage'
+					    build.Build()
+					}
+					
 				}
 			 }	
 		 }

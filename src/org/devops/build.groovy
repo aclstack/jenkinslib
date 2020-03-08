@@ -5,6 +5,6 @@ package org.devops
 def Build(){
    buildHome = tool "NPM"
    
-   println($buildHome)
+   println("${buildHome}")
 
 }

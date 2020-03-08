@@ -1,6 +1,8 @@
 @Library('jenkinslib') _  // Jenkins中配置的Library名称
 def tools = new org.devops.tools()  // 库中的目录结构,即src下面的东西
 
+def build = new org.devops.build()
+
 String workspace = "/opt/jenkins/workspace"
 
 pipeline{
@@ -38,10 +40,11 @@ pipeline{
 		stage("Build"){
 			steps{ 
 				timeout(time:20, unit:"MINUTES"){
-					script {
-					  sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
-					  sh 'npm run build:stage'	
-					}
+					// script {
+					  // sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
+					  // sh 'npm run build:stage'	
+					//}
+					build.Build()
 				}
 			 }	
 		 }

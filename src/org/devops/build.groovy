@@ -5,5 +5,6 @@ package org.devops
 def Build(){
    buildHome = tool "NPM"
    
+   println("123456")
 
 }

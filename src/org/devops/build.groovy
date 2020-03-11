@@ -12,8 +12,7 @@ def Build(build){
 } else {
    println("非编译项目")
    // sh "env"	  
-   WORKSPACE = tool "WORKSPACE"
-   println("${WORKSPACE}")	  
+   println(env.WORKSPACE)	  
 }	
 	
 	

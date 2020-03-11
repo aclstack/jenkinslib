@@ -1,6 +1,10 @@
 package org.devops
 
-def SonarScan(projectName,projectDesc,projectPath){
+def SonarScan(){
+    def projectName=env.JOB_NAME
+    def projectDesc="测试项目"
+    def projectPath=env.WORKSPACE
+    
     withSonarQubeEnv(credentialsId: 'SonaerServer-Admin') {
       def scannerHome = "/usr/local/sonar-scanner"
       def sonarDate = sh returnStdout: true, script: 'date +%Y%m%d%H%M%S'

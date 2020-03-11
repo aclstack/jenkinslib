@@ -11,6 +11,7 @@ def Build(build){
       """
 } else {
    println("非编译项目")
+   sh "env"	  
 }	
 	
 	

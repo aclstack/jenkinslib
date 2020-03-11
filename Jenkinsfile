@@ -43,7 +43,7 @@ pipeline{
 					 script {
 					  // sh 'npm install --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root'
 					  // sh 'npm run build:stage'
-					    build.Build()
+					    build.Build('')
 					}
 					
 				}

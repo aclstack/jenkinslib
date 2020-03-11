@@ -33,7 +33,7 @@ pipeline{
 					 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
    						doGenerateSubmoduleConfigurations: false,
    						extensions: [], submoduleCfg: [],
-   						userRemoteConfigs: [[url: 'https://github.com/PanJiaChen/vue-element-admin.git']]])
+   						userRemoteConfigs: [[url: 'https://github.com/mix-php/mix.git']]])
 				 }
 			 }	
 		 }

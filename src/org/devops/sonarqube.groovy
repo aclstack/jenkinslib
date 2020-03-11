@@ -12,14 +12,14 @@ def SonarScan(){
       
       
       sh """
-${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${projectName} \
--Dsonar.projectName=${projectName} \
--Dsonar.projectVersion=${sonarDate} \
--Dsonar.ws.timeout=30\
--Dsonar.projectDescription=${projectDesc} \          
--Dsonar.language=php \
--Dsonar.dynamicAnalysis=false  \
--Dsonar.sourceEncoding=UTF-8
+        ${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${projectName} \
+        -Dsonar.projectName=${projectName} \
+        -Dsonar.projectVersion=${sonarDate} \
+        -Dsonar.ws.timeout=30 \
+        -Dsonar.projectDescription=${projectDesc} \
+        -Dsonar.language=php \
+        -Dsonar.dynamicAnalysis=false \
+        -Dsonar.sourceEncoding=UTF-8
       """
   }
 }

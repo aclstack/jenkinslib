@@ -3,6 +3,8 @@ def tools = new org.devops.tools()  // 库中的目录结构,即src下面的东�
 
 def build = new org.devops.build()
 
+def sonarqube = new org.devops.sonarqube()
+
 String workspace = "/opt/jenkins/workspace"
 
 pipeline{
@@ -55,9 +57,10 @@ pipeline{
 			steps{ 	
 				timeout(time:5, unit:"MINUTES"){
 						script {	
-							println("代码扫描")
-							tools.PrintMes('获取代码','green')
+							// println("代码扫描")
+							// tools.PrintMes('获取代码','green')
 							tools.PrintMes("超级瞄准已部署", "green")	// share library调用
+							sonarqube.SonarScan()
 						}
 					}	
 				}

@@ -10,7 +10,8 @@ def Build(build){
 	   ${buildHome}/bin/npm run build:stage
       """
 } else {
-   println("非编译项目")	  
+   println("非编译项目")
+   sh "env"	  
 }	
 	
 	
